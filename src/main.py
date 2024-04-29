@@ -1,6 +1,10 @@
 from sdv.datasets.local import load_csvs
 from sdv.lite import SingleTablePreset
 from sdv.metadata import SingleTableMetadata
+from datetime import datetime
+
+
+timestamp = datetime.now().isoformat().replace(' ', 'H').replace(':','-')
 
 
 # Load your own csv
@@ -23,6 +27,15 @@ synthesizer.fit(data=data)
 # Generate 1000 new rows of data
 synthetic_data = synthesizer.sample(num_rows=1000)
 
+# Ensure cumulative sum per ticker is positive
+tickers = synthetic_data['Ticker'].unique()
+for ticker in tickers:
+    mask = synthetic_data['Ticker'] == ticker
+    synthetic_data.loc[mask, 'NetTradeAmount'] = synthetic_data.loc[mask, 'NetTradeAmount'].clip(lower=0)
+    synthetic_data.loc[mask, 'NetTradeAmount'] += abs(synthetic_data[mask]['NetTradeAmount'].min())
+
+
 # Save the synthetic data to a new CSV file
-synthetic_data.to_csv('synthetic_data.csv', index=False)
+print(f'Saving file as synthetic_data_{timestamp}.csv')
+synthetic_data.to_csv(f'synthetic_data_{timestamp}.csv', index=False)
 print(synthetic_data)

@@ -45,3 +45,5 @@ DateTimestamp,Ticker,Asset,NetTradeAmount,Action
 2023-02-16 08:50:00,VBMPX,Bonds,4000,Sell
 2023-02-17 09:25:00,VIIIX,Stocks,26000,Buy
 2023-02-18 10:40:00,VTINX,Bonds,4000,Buy
+2023-02-19 14:50:00,VTPSX,Stocks,800,Sell
+2023-02-20 12:10:00,VBMPX,Bonds,3000,Sell
