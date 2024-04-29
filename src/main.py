@@ -10,7 +10,7 @@ datasets = load_csvs(folder_name='./training_data',
                          'encoding': 'utf_8'
                      })
 
-data = datasets['bank-transaction_data']
+data = datasets['portfolio_rebalancing_data']
 
 # Auto detect metadata
 metadata = SingleTableMetadata()
@@ -24,5 +24,5 @@ synthesizer.fit(data=data)
 synthetic_data = synthesizer.sample(num_rows=1000)
 
 # Save the synthetic data to a new CSV file
-#synthetic_data.to_csv('synthetic_data.csv', index=False)
+synthetic_data.to_csv('synthetic_data.csv', index=False)
 print(synthetic_data)
