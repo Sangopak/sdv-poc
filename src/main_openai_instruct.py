@@ -1,11 +1,11 @@
 import json
-import pandas as pd
 from openai import OpenAI
+import pandas as pd
 
+# Set up OpenAI API key
 my_assigned_team = 'team_13'
 keys = json.load(open('C:/shared/content/config/api-keys/hackathon_openai_keys.json'))
 my_key = keys[my_assigned_team]
-
 
 client = OpenAI(api_key=my_key)
 
@@ -25,13 +25,12 @@ transactions_df = pd.DataFrame(transactions_data)
 transactions_str = transactions_df.to_string(index=False)
 
 prompt = "The following are stock transaction history:\n" + transactions_str + "\n\nAnalyze the trends and insights from this data."
-stream = client.chat.completions.create(
+
+response = client.completions.create(
   model="gpt-3.5-turbo-instruct",
-  messages=[
-    {"role": "user", "content": prompt}
-  ],
-  stream=True,
+  prompt=prompt,
+  max_tokens=1024,
+  temperature=0.5
 )
 
-for chunk in stream:
-    print(chunk.choices[0].delta.content or "", end="")
+print(response.choices[0].text)
