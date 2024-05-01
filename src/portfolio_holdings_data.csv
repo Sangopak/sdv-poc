@@ -1,0 +1,6 @@
+Ticker,Number of Shares,Purchase Price Per Share,Current Market Price per Share,Total Value,Unrealized Gain/Loss
+AAPL,150,$160,$180,$27,000,+$3,000
+HD,100,$220,$240,$24,000,+$2,000
+BND,80,$190,$200,$16,000,+$800
+VGT,50,$250,$280,$14,000,+$1,500
+VUG,120,$180,$200,$24,000,+$2,400

@@ -19,13 +19,15 @@ client = OpenAI(api_key=my_key)
 # }
 
 # Convert the data to a Pandas DataFrame
-transactions_df = pd.read_csv('portfolio_rebalancing_data-works.csv')
+transactions_df = pd.read_csv('portfolio_rebalancing_data.csv')
+portfolio_holdings_df = pd.read_csv('portfolio_holdings_data.csv')
 
 # Convert DataFrame to a formatted string
 transactions_str = transactions_df.to_string(index=False)
-allocation_goal = '90% Stock, 10% Bond'
+allocation_goal = '60% Stock, 30% Bond and 10% Cash'
 
-prompt = "Given the portfolio allocation goal: "+ allocation_goal +" and transaction history:\n" + transactions_str + "\nAnalyze the trends for portfolio rebalancing from this data."
+prompt = "Given the portfolio allocation goal: "+ allocation_goal +" transaction history:\n" + transactions_str + "\n and portfolio holdings: " + portfolio_holdings_df
+"\nAnalyze the trends for portfolio rebalancing from this data."
 
 response = client.completions.create(
   model="gpt-3.5-turbo-instruct",
