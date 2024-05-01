@@ -68,3 +68,7 @@ Bullish stock market with expectations of continued growth
 Rising interest rates impacting bond prices
 Constraints/Preferences:
 ```
+
+# Rebalnce between VGT Stock BND Bond
+```
+```
