@@ -39,3 +39,32 @@ tial price changes.
 9. Lack of information: The data does not provide information on the reason behind the investor's buying and selling decisions, making it difficult to fully understand their investment strategy.
 10. Overall performance: Without knowing the initial investment amount, it is difficult to determine the overall performance of the investor's AAPL investment. However, the increase in stock price
 and the increase in investment suggest a positive trend.
+
+
+# Chi's suggestion for data
+
+```
+Current Portfolio Holdings:
+
+Stock A: 100 shares
+Stock B: 200 shares
+Bond Fund C: $50,000
+ETF D: 300 units
+Portfolio Allocation Goals:
+
+Stocks: 60%
+Bonds: 30%
+Cash: 10%
+Investment Goals:
+
+Long-term growth with moderate risk tolerance
+Outperform the market benchmark by X% annually
+Risk Tolerance:
+
+Moderate
+Market Conditions:
+
+Bullish stock market with expectations of continued growth
+Rising interest rates impacting bond prices
+Constraints/Preferences:
+```
