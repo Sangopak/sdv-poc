@@ -23,9 +23,8 @@ transactions_df = pd.read_csv('portfolio_rebalancing_data-works.csv')
 
 # Convert DataFrame to a formatted string
 transactions_str = transactions_df.to_string(index=False)
-allocation_goal = '90% Stock, 10% Bond'
 
-prompt = "Given the portfolio allocation goal: "+ allocation_goal +" and transaction history:\n" + transactions_str + "\nAnalyze the trends for portfolio rebalancing from this data."
+prompt = "Given the portfolio transaction history:\n" + transactions_str + "\nDertmine the target portfolio allocation and analyze the rebalance trends from this data."
 
 response = client.completions.create(
   model="gpt-3.5-turbo-instruct",

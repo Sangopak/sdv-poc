@@ -1,5 +1,5 @@
-DateTimestamp,Ticker,Asset,Previous Holding,Current Holding,Action,Price Per Share,Market Condition,Current Market Value
-2023-01-03 09:30:00,VGT,Stocks,0,93,Buy,$384.76,Bullish,$35782.68
-2023-01-03 09:30:00,BND,Bonds,0,51,Buy,$77.56,Bearish,$3955.56
-2023-01-30 10:30:00,VGT,Stocks,93,92,Sell,$390.76,Bullish,$35949.92
-2023-01-30 10:30:00,BND,Bonds,51,6,Buy,$70.56,Bearish,$4021.92
+DateTimestamp,Ticker,Asset,Previous Holding,Current Holding,Action,Price Per Share,Market Condition,Current Market Value,Previous allocation percentage, Current allocation percentage
+2023-01-03 09:30:00,VGT,Stocks,0,93,Buy,$384.76,Bullish,$35782.68,0%,100%
+2023-01-04 09:30:00,BND,Bonds,0,51,Buy,$77.56,Bearish,$3955.56,0%,10%
+2023-01-30 10:30:00,VGT,Stocks,93,92,Sell,$390.76,Bullish,$35949.92,92%,90%
+2023-01-31 10:30:00,BND,Bonds,51,57,Buy,$70.56,Bearish,$4021.92,8%,10%
