@@ -19,7 +19,7 @@ client = OpenAI(api_key=my_key)
 # }
 
 # Convert the data to a Pandas DataFrame
-transactions_df = pd.read_csv('portfolio_rebalancing_data-works.csv')
+transactions_df = pd.read_csv('portfolio_rebalancing_data.csv')
 
 # Convert DataFrame to a formatted string
 transactions_str = transactions_df.to_string(index=False)
