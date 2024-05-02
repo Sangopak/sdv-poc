@@ -1,0 +1,5 @@
+DateTimestamp,Ticker,Asset,CurrentHolding,Quantity,Action,PricePerShare,RiskTolerance,MarketCondition,Allocation,MarketValue
+2023-01-03 09:30:00,VGT,Stocks,0,93,Buy,384.76,Moderate,Bullish,90,35,782.68
+2023-01-03 09:31:00,BND,Bonds,0,51,Buy,77.56,Moderate,Bullish,10,3955.56
+2023-01-30 10:30:00,VGT,Stocks,93,1,Sell,390.76,Moderate,Bullish,90,35,949.92
+2023-01-30 10:31:00,BND,Bonds,51,6,Buy,70.56,Moderate,Bullish,10,4021.92

@@ -2,7 +2,7 @@ import json
 import pandas as pd
 from openai import OpenAI
 
-my_assigned_team = 'team_22'
+my_assigned_team = 'team_13'
 keys = json.load(open('C:/shared/content/config/api-keys/hackathon_openai_keys.json'))
 my_key = keys[my_assigned_team]
 
@@ -26,7 +26,7 @@ transactions_str = transactions_df.to_string(index=False)
 
 prompt = "The following are stock transaction history:\n" + transactions_str + "\n\nAnalyze the trends and insights from this data."
 stream = client.chat.completions.create(
-  model="gpt-3.5-turbo",
+  model="gpt-3.5-turbo-instruct",
   messages=[
     {"role": "user", "content": prompt}
   ],
